@@ -15,7 +15,7 @@ string func(string(*A)[M]) {
         char vocali[] = { 'a', 'e', 'i','o','u' };
         for (size_t i = 0; i < N; i++)
                 for (size_t j = 0; j < M; j++)
-                        if (A[i][j].length() - (i + j) > A[j % N][i % M].length())
+                        if (A[i][j].length() - (i + j) >= A[j % N][i % M].length())
                                 for (size_t k = 0; k < A[i][j].length(); k++)
                                         for (size_t h = 0; h < 5; h++)
                                                 if ((char)tolower(A[i][j][k]) == vocali[h])
